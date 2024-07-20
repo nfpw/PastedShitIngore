@@ -1221,14 +1221,14 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
 	local imageLabel = Instance.new("ImageLabel")
-    	imageLabel.Image = "http://www.roblox.com/asset/?id=18215499099"
-    	imageLabel.Size = UDim2.new(0, 400, 0, 300)
-    	imageLabel.Position = UDim2.new(0.5, 0, 0.6, 0)
-    	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-    	imageLabel.BackgroundTransparency = 1
+    imageLabel.Image = "http://www.roblox.com/asset/?id=18215499099"
+    imageLabel.Size = UDim2.new(0, 400, 0, 300)
+    imageLabel.Position = UDim2.new(0.5, 0, 0.6, 0)
+    imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    imageLabel.BackgroundTransparency = 1
 	imageLabel.ImageTransparency = 0
-    	imageLabel.Visible = true
-    	imageLabel.Parent = LoadingFrame
+    imageLabel.Visible = true
+    imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
@@ -1546,7 +1546,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	TweenService:Create(Main.Shadow.Image, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {ImageTransparency = 0.55}):Play()
 	task.wait(0.1)
 	TweenService:Create(LoadingFrame.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
-	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {ImageTransparency = 0}):Play()
 	task.wait(0.05)
 	TweenService:Create(LoadingFrame.Subtitle, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	task.wait(0.05)
@@ -3353,7 +3353,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 
 	task.wait(1.2)
 	TweenService:Create(LoadingFrame.Title, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
-	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
 	TweenService:Create(LoadingFrame.Subtitle, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 	TweenService:Create(LoadingFrame.Version, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 	task.wait(0.2)
