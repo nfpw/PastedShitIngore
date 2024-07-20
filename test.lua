@@ -1228,7 +1228,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
     	imageLabel.BackgroundTransparency = 1
 	imageLabel.ImageTransparency = 1
     	imageLabel.Visible = true
-	imageLabel.ScaleType = "Fit"
+	--imageLabel.ScaleType = "Fit"
     	imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
