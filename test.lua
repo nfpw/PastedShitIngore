@@ -1223,7 +1223,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	local imageLabel = Instance.new("ImageLabel")
     	imageLabel.Image = "http://www.roblox.com/asset/?id=18215499099"
     	imageLabel.Size = UDim2.new(0, 300, 0, 200)
-    	imageLabel.Position = UDim2.new(0.62, 0, 0.6, 0)
+    	imageLabel.Position = UDim2.new(0.64, 0, 0.55, 0)
     	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     	imageLabel.BackgroundTransparency = 1
 	imageLabel.ImageTransparency = 1
