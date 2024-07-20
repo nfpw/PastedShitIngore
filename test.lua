@@ -1221,14 +1221,14 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
 	local imageLabel = Instance.new("ImageLabel")
-    imageLabel.Image = "http://www.roblox.com/asset/?id=18215499099"
-    imageLabel.Size = UDim2.new(0, 400, 0, 300)
-    imageLabel.Position = UDim2.new(0.5, 0, 0.6, 0)
-    imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-    imageLabel.BackgroundTransparency = 1
-	imageLabel.ImageTransparency = 0
-    imageLabel.Visible = true
-    imageLabel.Parent = LoadingFrame
+    	imageLabel.Image = "http://www.roblox.com/asset/?id=18215499099"
+    	imageLabel.Size = UDim2.new(0, 300, 0, 200)
+    	imageLabel.Position = UDim2.new(0.62, 0, 0.6, 0)
+    	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    	imageLabel.BackgroundTransparency = 1
+	imageLabel.ImageTransparency = 1
+    	imageLabel.Visible = true
+    	imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
