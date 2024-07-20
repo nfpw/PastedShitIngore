@@ -1226,7 +1226,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
     	imageLabel.Position = UDim2.new(0.5, 0, 0.6, 0)
     	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     	imageLabel.BackgroundTransparency = 1
-	imageLabel.ImageTransparency = 0
+	imageLabel.ImageTransparency = 1
     	imageLabel.Visible = true
     	imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
