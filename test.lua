@@ -1226,7 +1226,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
     	imageLabel.Position = UDim2.new(0.5, 0, 0.6, 0)
     	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     	imageLabel.BackgroundTransparency = 1
-	imageLabel.ImageTransparency = 1
+	imageLabel.ImageTransparency = 0
     	imageLabel.Visible = true
     	imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
@@ -1546,6 +1546,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	TweenService:Create(Main.Shadow.Image, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {ImageTransparency = 0.55}):Play()
 	task.wait(0.1)
 	TweenService:Create(LoadingFrame.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	task.wait(0.05)
 	TweenService:Create(LoadingFrame.Subtitle, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	task.wait(0.05)
@@ -3352,6 +3353,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 
 	task.wait(1.2)
 	TweenService:Create(LoadingFrame.Title, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+	TweenService:Create(LoadingFrame.ImageLabel, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 	TweenService:Create(LoadingFrame.Subtitle, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 	TweenService:Create(LoadingFrame.Version, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 	task.wait(0.2)
