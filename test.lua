@@ -1221,15 +1221,15 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
 	local imageLabel = Instance.new("ImageLabel")
-    	imageLabel.Image = "http://www.roblox.com/asset/?id=18579525512"
-    	imageLabel.Size = UDim2.new(0, 300, 0, 200)
-    	imageLabel.Position = UDim2.new(0.64, 0, 0.48, 0)
-    	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-    	imageLabel.BackgroundTransparency = 1
+    imageLabel.Image = "http://www.roblox.com/asset/?id=18579525512"
+    imageLabel.Size = UDim2.new(0, 300, 0, 200)
+    imageLabel.Position = UDim2.new(0.64, 0, 0.48, 0)
+    imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    imageLabel.BackgroundTransparency = 1
 	imageLabel.ImageTransparency = 1
-    	imageLabel.Visible = true
+    imageLabel.Visible = true
 	imageLabel.ScaleType = "Fit"
-    	imageLabel.Parent = LoadingFrame
+    imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
@@ -3521,9 +3521,8 @@ FieldScreen.Parent = gethui and gethui() or game:GetService("CoreGui")
 
 local UniButton = Instance.new("ImageLabel")
 UniButton.Name = "UniButton"
-UniButton.Image = "rbxassetid://14958620447"
+UniButton.Image = "http://www.roblox.com/asset/?id=18579525512"
 UniButton.Active = false
---UniButton.AnchorPoint = Vector2.new(0.5,0.5)
 UniButton.ZIndex = 10
 UniButton.Position = UDim2.new(0.8,0,0,0)
 UniButton.BorderSizePixel = 0
@@ -3534,7 +3533,6 @@ UniButton.Parent = FieldScreen
 
 local UniBoxButton = Instance.new("TextButton")
 UniBoxButton.Name = "UniBoxButton"
---UniBoxButton.AnchorPoint = Vector2.new(0.5,0.5)
 UniBoxButton.ZIndex = 10
 UniBoxButton.AnchorPoint = Vector2.new(0.5, 0)
 UniBoxButton.Position = UDim2.new(0.5, 0, 0, 0)
