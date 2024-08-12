@@ -1210,33 +1210,42 @@ end
 
 local KeyMainUI
 function ArrayFieldLibrary:CreateWindow(Settings)
-	ArrayField.Enabled = false
-	local Passthrough = false
-	Topbar.Title.Text = Settings.Name
-	Main.Size = UDim2.new(0, 450, 0, 260)
-	Main.Visible = true
-	Main.BackgroundTransparency = 1
-	LoadingFrame.Title.TextTransparency = 1
-	LoadingFrame.Subtitle.TextTransparency = 1
-	Main.Shadow.Image.ImageTransparency = 1
-	LoadingFrame.Version.TextTransparency = 1
-	local MarketplaceService = game:GetService("MarketplaceService")
-	local gameIcon = MarketplaceService:GetProductInfo(game.PlaceId).IconImageAssetId
-	local imageLabel = Instance.new("ImageLabel")
+    	ArrayField.Enabled = false
+    	local Passthrough = false
+    	Topbar.Title.Text = Settings.Name
+   	 Main.Size = UDim2.new(0, 450, 0, 260)
+   	 Main.Visible = true
+    	Main.BackgroundTransparency = 1
+    	LoadingFrame.Title.TextTransparency = 1
+    	LoadingFrame.Subtitle.TextTransparency = 1
+    	Main.Shadow.Image.ImageTransparency = 1
+    	LoadingFrame.Version.TextTransparency = 1
+    	local MarketplaceService = game:GetService("MarketplaceService")
+    	local gameIcon = MarketplaceService:GetProductInfo(game.PlaceId).IconImageAssetId
+    	local imageLabel = Instance.new("ImageLabel")
     	imageLabel.Image = "http://www.roblox.com/asset/?id="..gameIcon
     	imageLabel.Size = UDim2.new(0, 300, 0, 200)
-    	imageLabel.Position = UDim2.new(0.64, 0, 0.48, 0)
+    	imageLabel.Position = UDim2.new(0.5, 0, 0.35, 0)
     	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     	imageLabel.BackgroundTransparency = 1
-	imageLabel.ImageTransparency = 1
+    	imageLabel.ImageTransparency = 1
     	imageLabel.Visible = true
-	imageLabel.ScaleType = "Fit"
+    	imageLabel.ScaleType = Enum.ScaleType.Fit
     	imageLabel.Parent = LoadingFrame
-	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
-	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
-	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
-		LoadingFrame.Version.Text = "Arrayfield UI"
-	end
+    	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
+    	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
+    	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
+        	LoadingFrame.Version.Text = "Arrayfield UI"
+    	end
+    	local imageLabelHeight = imageLabel.Size.Y.Offset
+    	local imageLabelY = imageLabel.Position.Y.Offset
+    	local gap = 10
+    	LoadingFrame.Title.Position = UDim2.new(0.5, 0, 0.35 + (imageLabelHeight / 2) + gap, 0)
+    	LoadingFrame.Title.AnchorPoint = Vector2.new(0.5, 0)
+    	LoadingFrame.Title.BackgroundTransparency = 1
+    	LoadingFrame.Subtitle.Position = UDim2.new(0.5, 0, 0.35 + (imageLabelHeight / 2) + gap + 30, 0)
+    	LoadingFrame.Subtitle.AnchorPoint = Vector2.new(0.5, 0)
+    	LoadingFrame.Subtitle.BackgroundTransparency = 1
 	Topbar.Visible = false
 	Elements.Visible = false
 	LoadingFrame.Visible = true
