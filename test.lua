@@ -1220,16 +1220,18 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	LoadingFrame.Subtitle.TextTransparency = 1
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
+	local MarketplaceService = game:GetService("MarketplaceService")
+	local gameIcon = MarketplaceService:GetProductInfo(game.PlaceId).IconImageAssetId
 	local imageLabel = Instance.new("ImageLabel")
-    imageLabel.Image = "http://www.roblox.com/asset/?id=18579525512"
-    imageLabel.Size = UDim2.new(0, 300, 0, 200)
-    imageLabel.Position = UDim2.new(0.64, 0, 0.48, 0)
-    imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-    imageLabel.BackgroundTransparency = 1
+    	imageLabel.Image = "http://www.roblox.com/asset/?id="..gameIcon
+    	imageLabel.Size = UDim2.new(0, 300, 0, 200)
+    	imageLabel.Position = UDim2.new(0.64, 0, 0.48, 0)
+    	imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    	imageLabel.BackgroundTransparency = 1
 	imageLabel.ImageTransparency = 1
-    imageLabel.Visible = true
+    	imageLabel.Visible = true
 	imageLabel.ScaleType = "Fit"
-    imageLabel.Parent = LoadingFrame
+    	imageLabel.Parent = LoadingFrame
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
