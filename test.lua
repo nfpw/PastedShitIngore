@@ -1241,11 +1241,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
     	local imageLabelY = imageLabel.Position.Y.Offset
     	local gap = 1
     	LoadingFrame.Title.Position = UDim2.new(0.5, 0, 0.35 + (imageLabelHeight / 2) + gap, 0)
-    	LoadingFrame.Title.AnchorPoint = Vector2.new(0.5, 0)
-    	LoadingFrame.Title.BackgroundTransparency = 1
     	LoadingFrame.Subtitle.Position = UDim2.new(0.5, 0, 0.35 + (imageLabelHeight / 2) + gap + 30, 0)
-    	LoadingFrame.Subtitle.AnchorPoint = Vector2.new(0.5, 0)
-    	LoadingFrame.Subtitle.BackgroundTransparency = 1
 	Topbar.Visible = false
 	Elements.Visible = false
 	LoadingFrame.Visible = true
