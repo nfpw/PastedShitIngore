@@ -131,13 +131,7 @@ end)
 
 local ParentObject = function(Gui)
 	local success, failure = pcall(function()
-		if get_hidden_gui or gethui then
-			local hiddenUI = get_hidden_gui or gethui
-			Gui.Parent = hiddenUI()
-		elseif (not is_sirhurt_closure) and (syn and syn.protect_gui) then
-			syn.protect_gui(Gui)
-			Gui.Parent = CoreGui
-		elseif CoreGui then
+		if CoreGui then
 			Gui.Parent = CoreGui
 		end
 	end)
