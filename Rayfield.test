@@ -2516,7 +2516,7 @@ UniBoxButton.Text = ""
 UniBoxButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
 UniBoxButton.Parent = UniButton
 
-ArrayFieldLibrary.UniButton = UniButton
+RayfieldLibrary.UniButton = UniButton
 
 UniButtonClicked = function(name,inputState,inputObject)
 	if Debounce then return end
